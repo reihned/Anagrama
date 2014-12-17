@@ -1,0 +1,13 @@
+<div>
+  <hr>
+  <form method="POST" action="{{form_path}}">
+    <input type="hidden" name="_method" value="POST">
+    {{#form_items}}
+    <p><label>
+      {{.}}
+      <input type="text" name="{{.}}" />
+    </label></p>
+    {{/form_items}}
+    <button>{{button}}</button>
+  </form>
+</div>
