@@ -30,7 +30,7 @@ get '/' do
   anagram_columns = Anagram.column_names
   anagram_columns.delete("id")
 
-  form_items = { form_items: anagram_columns, form_path: "/submit" }
+  form_items = { form_items: anagram_columns, form_path: "/submit", button: 'Submit'}
 
   form_template = File.read('./template/dyn_form.html')
   form_html = Mustache.render(form_template, form_items)
